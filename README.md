@@ -66,6 +66,10 @@ flowchart LR
     G --> A[answer + citations + entities]
 ```
 
+## Demo
+
+An interactive Streamlit app (`streamlit_app.py`) lets you ask a clinical question and see the grounded answer, citations, and detected entities. Run it locally with `streamlit run streamlit_app.py`, or deploy it free on [Streamlit Community Cloud](https://streamlit.io/cloud) by connecting this repo and setting the main file to `streamlit_app.py`.
+
 ## Quickstart
 
 ```bash
