@@ -2,7 +2,6 @@
 
 - **Date:** 2026-06-25
 - **Status:** Approved
-- **Portfolio role:** AI/ML + Data Scientist (repo 6 of 6).
 
 ## Overview
 
@@ -12,9 +11,9 @@ with citations, behind a FastAPI service. Built dependency-free and offline-
 verifiable, with a configurable generation backend (extractive default, or
 hosted Claude/OpenAI).
 
-## Resume claims this proves
+## What it demonstrates
 
-| Claim | How |
+| Capability | How |
 |---|---|
 | RAG, retrieval-augmented generation | Full retrieve → ground → generate pipeline with citations |
 | NLP, NER, semantic search, embeddings | TF-IDF retrieval + dictionary clinical NER (pluggable for transformers/scispaCy) |
