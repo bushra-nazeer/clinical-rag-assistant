@@ -50,16 +50,30 @@ def build_index(cfg: Config) -> Retriever:
     retriever = Retriever().fit()
     path = Path(cfg.paths.index_path)
     path.parent.mkdir(parents=True, exist_ok=True)
+    # Pickle plain data (sklearn/scipy/builtin types), NOT the custom Retriever
+    # class — so the index loads under any entrypoint (pytest, uvicorn, `-m`)
+    # without a __main__ class-resolution error.
+    payload = {"vectorizer": retriever.vectorizer, "matrix": retriever.matrix, "docs": retriever.docs}
     with open(path, "wb") as fh:
-        pickle.dump(retriever, fh)
+        pickle.dump(payload, fh)
     return retriever
 
 
 def load_index(cfg: Config) -> Retriever:
     path = Path(cfg.paths.index_path)
     if path.exists():
-        with open(path, "rb") as fh:
-            return pickle.load(fh)
+        payload = None
+        try:
+            with open(path, "rb") as fh:
+                payload = pickle.load(fh)
+        except Exception:
+            payload = None
+        if isinstance(payload, dict):
+            retriever = Retriever(docs=payload["docs"])
+            retriever.vectorizer = payload["vectorizer"]
+            retriever.matrix = payload["matrix"]
+            return retriever
+    # Missing, unreadable, or old-format index -> rebuild from the corpus.
     return build_index(cfg)
 
 
