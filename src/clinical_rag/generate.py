@@ -1,7 +1,7 @@
 """Answer generation with a configurable backend.
 
 Default ``extractive`` composes a grounded answer from the retrieved passages
-with citations — no external calls. ``anthropic`` / ``openai`` backends are
+with citations, no external calls. ``anthropic`` / ``openai`` backends are
 lazily imported and call a hosted LLM over the retrieved context, falling back
 to extractive if the SDK or API key is unavailable.
 """

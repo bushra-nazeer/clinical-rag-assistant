@@ -10,7 +10,7 @@ retrieval** over a clinical reference corpus → **dictionary clinical NER** →
 generation backend is **configurable** (offline extractive default, or hosted
 **Claude / OpenAI**) and the whole thing runs with **zero downloads**.
 
-> Educational demo only — not medical advice; uses no PHI. Metrics below are from
+> Educational demo only, not medical advice; uses no PHI. Metrics below are from
 > a real `make evaluate` run.
 
 ## Retrieval quality (QA eval set)
@@ -33,8 +33,8 @@ treatment for type 2 diabetes?"*
   "question": "For patient [REDACTED_MRN] and SSN [REDACTED_SSN], what is first-line treatment for type 2 diabetes?",
   "answer": "First-line pharmacologic therapy for type 2 diabetes is metformin, alongside lifestyle modification. The general A1C target for many non-pregnant adults is below 7% ... (Sources: DM-MGMT, DM-DX)",
   "citations": [
-    {"doc_id": "DM-MGMT", "title": "Type 2 Diabetes — Management", "score": 0.298},
-    {"doc_id": "DM-DX", "title": "Type 2 Diabetes — Diagnosis", "score": 0.230}
+    {"doc_id": "DM-MGMT", "title": "Type 2 Diabetes, Management", "score": 0.298},
+    {"doc_id": "DM-DX", "title": "Type 2 Diabetes, Diagnosis", "score": 0.230}
   ],
   "entities": [{"text": "type 2 diabetes", "type": "CONDITION", "code": "E11.9", "start": 84}],
   "pii_redacted": ["MRN", "SSN"]
@@ -54,7 +54,7 @@ extracted and coded.
 | Generation | extractive + citations | hosted LLM (`llm.provider: anthropic` / `openai`) |
 
 Set `llm.provider` in `config.yaml`; the API backends are lazily imported and
-fall back to extractive if the SDK/key is absent — so it always runs.
+fall back to extractive if the SDK/key is absent, so it always runs.
 
 ## Architecture
 

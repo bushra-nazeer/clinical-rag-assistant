@@ -23,12 +23,12 @@ flowchart LR
 
 The generation backend is selected in `config.yaml` (`llm.provider`). The
 `anthropic` / `openai` paths are lazily imported and fall back to extractive if
-the SDK or API key is missing — so the repo always runs.
+the SDK or API key is missing, so the repo always runs.
 
 ## Guardrails & grounding
 
 - **PII guardrail** (`pii.py`) redacts SSN/MRN/email/phone/dates *before* the
-  query reaches retrieval or any hosted LLM — HIPAA-conscious by construction.
+  query reaches retrieval or any hosted LLM, HIPAA-conscious by construction.
 - **Grounding**: answers are built only from retrieved passages and carry
   `doc_id` citations; nothing is fabricated outside the corpus.
 

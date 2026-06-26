@@ -51,7 +51,7 @@ def build_index(cfg: Config) -> Retriever:
     path = Path(cfg.paths.index_path)
     path.parent.mkdir(parents=True, exist_ok=True)
     # Pickle plain data (sklearn/scipy/builtin types), NOT the custom Retriever
-    # class — so the index loads under any entrypoint (pytest, uvicorn, `-m`)
+    # class, so the index loads under any entrypoint (pytest, uvicorn, `-m`)
     # without a __main__ class-resolution error.
     payload = {"vectorizer": retriever.vectorizer, "matrix": retriever.matrix, "docs": retriever.docs}
     with open(path, "wb") as fh:

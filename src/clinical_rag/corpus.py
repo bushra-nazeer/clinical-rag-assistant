@@ -2,17 +2,17 @@
 
 General, public medical-reference knowledge (no PHI). This stands in for what
 would be an indexed corpus of clinical guidelines / literature in production.
-For educational/demo use only — not medical advice.
+For educational/demo use only, not medical advice.
 """
 
 from __future__ import annotations
 
 CORPUS: list[dict] = [
-    {"doc_id": "DM-DX", "title": "Type 2 Diabetes — Diagnosis", "topic": "diabetes",
+    {"doc_id": "DM-DX", "title": "Type 2 Diabetes, Diagnosis", "topic": "diabetes",
      "text": "Type 2 diabetes is diagnosed by a fasting plasma glucose of 126 mg/dL or higher, "
              "an A1C of 6.5% or higher, or a 2-hour plasma glucose of 200 mg/dL or higher during "
              "an oral glucose tolerance test. Results should be confirmed by repeat testing."},
-    {"doc_id": "DM-MGMT", "title": "Type 2 Diabetes — Management", "topic": "diabetes",
+    {"doc_id": "DM-MGMT", "title": "Type 2 Diabetes, Management", "topic": "diabetes",
      "text": "First-line pharmacologic therapy for type 2 diabetes is metformin, alongside lifestyle "
              "modification. The general A1C target for many non-pregnant adults is below 7%. Therapy is "
              "intensified with additional agents such as GLP-1 receptor agonists or SGLT2 inhibitors when "
@@ -20,14 +20,14 @@ CORPUS: list[dict] = [
     {"doc_id": "DM-A1C", "title": "Interpreting A1C", "topic": "diabetes",
      "text": "Hemoglobin A1C reflects average blood glucose over roughly three months. An A1C below 5.7% is "
              "normal, 5.7% to 6.4% indicates prediabetes, and 6.5% or higher is consistent with diabetes."},
-    {"doc_id": "HTN-BP", "title": "Hypertension — Blood Pressure Thresholds", "topic": "hypertension",
+    {"doc_id": "HTN-BP", "title": "Hypertension, Blood Pressure Thresholds", "topic": "hypertension",
      "text": "Normal blood pressure is below 120/80 mmHg. Elevated is 120-129 systolic and below 80 diastolic. "
              "Stage 1 hypertension is 130-139/80-89 mmHg, and stage 2 is 140/90 mmHg or higher."},
-    {"doc_id": "HTN-MGMT", "title": "Hypertension — Management", "topic": "hypertension",
+    {"doc_id": "HTN-MGMT", "title": "Hypertension, Management", "topic": "hypertension",
      "text": "Initial antihypertensive options include thiazide diuretics, ACE inhibitors such as lisinopril, "
-             "ARBs, and calcium channel blockers. Lifestyle changes — reduced sodium, weight loss, and exercise — "
+             "ARBs, and calcium channel blockers. Lifestyle changes, reduced sodium, weight loss, and exercise, "
              "are recommended for all patients."},
-    {"doc_id": "ASTHMA", "title": "Asthma — Overview", "topic": "asthma",
+    {"doc_id": "ASTHMA", "title": "Asthma, Overview", "topic": "asthma",
      "text": "Asthma is a chronic inflammatory airway disease causing wheezing, cough, and shortness of breath. "
              "Short-acting beta agonists such as albuterol relieve acute symptoms; inhaled corticosteroids are "
              "the mainstay of long-term control."},

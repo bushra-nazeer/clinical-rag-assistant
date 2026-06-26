@@ -1,4 +1,4 @@
-# clinical-rag-assistant — Design Spec
+# clinical-rag-assistant, Design Spec
 
 - **Date:** 2026-06-25
 - **Status:** Approved
@@ -27,7 +27,7 @@ hosted Claude/OpenAI).
 Default backend is fully offline and download-free (TF-IDF + extractive), so the
 repo builds and verifies on a constrained connection. Transformer embeddings,
 scispaCy/BioBERT NER, and hosted LLMs are documented, lazily-imported optional
-extras — the interfaces are identical, so swapping them in is a config change.
+extras, the interfaces are identical, so swapping them in is a config change.
 
 ## Testing
 
@@ -41,4 +41,4 @@ Verified (tests + a real `make evaluate` retrieval run + an `/ask` response) →
 `clinical-rag-assistant.zip`, shipping the built index so `/ask` works out of
 the box. Docker canonical runtime; CI runs ruff + pytest.
 
-> Educational/demo only — not medical advice; uses no PHI.
+> Educational/demo only, not medical advice; uses no PHI.
