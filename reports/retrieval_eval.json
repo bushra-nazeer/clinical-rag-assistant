@@ -1,0 +1,61 @@
+{
+  "metrics": {
+    "questions": 10,
+    "hit_rate_at_k": 0.9,
+    "mrr_at_k": 0.9,
+    "recall_at_k": 0.9,
+    "k": 4
+  },
+  "per_question": [
+    {
+      "question": "What is the first-line medication for type 2 diabetes?",
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "question": "What A1C level confirms a diagnosis of diabetes?",
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "question": "What blood pressure is considered stage 2 hypertension?",
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "question": "Which medications treat high blood pressure?",
+      "hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "question": "How is asthma controlled long term?",
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "question": "What lowers LDL cholesterol and cardiovascular risk?",
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "question": "How is a urinary tract infection treated?",
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "question": "What is first-line therapy for obstructive sleep apnea?",
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "question": "What tests are done for acute chest pain?",
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "question": "How is GERD managed?",
+      "hit": true,
+      "reciprocal_rank": 1.0
+    }
+  ]
+}

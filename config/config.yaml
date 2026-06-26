@@ -1,0 +1,22 @@
+# Central configuration for the clinical RAG assistant.
+
+paths:
+  index_path: models/rag_index.pkl
+  reports_dir: reports
+  figures_dir: reports/figures
+
+random_state: 42
+
+retriever:
+  top_k: 4
+
+# Generation backend: "extractive" (no deps/keys, default), "anthropic", or "openai".
+# API backends are lazily imported and require the matching extra + an API key.
+llm:
+  provider: extractive
+  anthropic_model: claude-sonnet-4-6
+  openai_model: gpt-4o-mini
+  max_tokens: 400
+
+eval:
+  k: 4
